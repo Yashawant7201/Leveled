@@ -1,0 +1,160 @@
+/* Custom styles that override or complement Bootstrap */
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.hero {
+    background-color: #f8f9fa;
+}
+
+/* Image slider styles */
+.slider-container {
+    width: 100%;
+    overflow: hidden;
+}
+
+.slider-track {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.slide {
+    flex: 0 0 33.33%;
+    padding: 0 15px;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Custom card hover effects */
+.bg-light {
+    transition: all 0.3s ease;
+}
+
+.bg-light:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* Logo hover effects */
+.featured-logo img:hover {
+    opacity: 1 !important;
+}
+
+.hover-zoom {
+    transition: all 0.5s ease;
+  transform-origin: center center;
+  }
+  .hover-zoom:hover {
+    transform: scale(1.8);
+  }
+  .overflow-hidden {
+    overflow: hidden;
+  }
+
+  /* Testimonial Slider Styles */
+.slider-container-testimonial {
+    position: relative;
+    overflow: hidden;
+}
+
+.slider-track-testimonial {
+    display: flex;
+    width: 400%;
+    transition: transform 0.5s ease;
+}
+
+.slide-testimonial {
+    flex: 0 0 25%;
+    width: 100%;
+}
+
+/* Hide radio buttons */
+.d-none {
+    display: none;
+}
+
+/* Slide navigation with radio buttons */
+#testimonial-slide1:checked ~ .slider-track-testimonial {
+    transform: translateX(0);
+}
+
+#testimonial-slide2:checked ~ .slider-track-testimonial {
+    transform: translateX(-25%);
+}
+
+#testimonial-slide3:checked ~ .slider-track-testimonial {
+    transform: translateX(-50%);
+}
+
+#testimonial-slide4:checked ~ .slider-track-testimonial {
+    transform: translateX(-75%);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .slide {
+        flex: 0 0 100%;
+    }
+    
+    .hero h1 {
+        font-size: 2rem;
+    }
+}
+
+/* Benefits Section Responsive Adjustments */
+@media (max-width: 992px) {
+  .row.justify-content-center.gap-1 {
+    flex-direction: column;
+    height: auto !important;
+  }
+  
+  .row.justify-content-center.gap-1 > div {
+    width: 100% !important;
+    height: auto !important;
+  }
+  
+  .col-md-5.p-0 img {
+    border-radius: 1rem !important;
+    margin-bottom: 1rem;
+  }
+  
+  .col-md-5.d-flex {
+    gap: 1rem !important;
+  }
+}
+
+/* FAQ Section Responsive Adjustments */
+@media (max-width: 768px) {
+  .accordion-item {
+    margin-bottom: 0.5rem;
+  }
+  
+  .accordion-button {
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+  }
+  
+  .accordion-body {
+    padding: 1rem;
+  }
+}
+
+/* General adjustments for very small screens */
+@media (max-width: 576px) {
+  .container.my-5 {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  
+  .display-4 {
+    font-size: 2.5rem;
+  }
+  
+  .lead {
+    font-size: 1rem;
+  }
+}
